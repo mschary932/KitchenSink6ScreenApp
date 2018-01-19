@@ -33,10 +33,10 @@ public class Frm4 extends BaseForm {
 	 * find the Web Element of a page.
 	 */
 
-	@FindBy(name = "Browser")
+	@FindBy(className = "android.webkit.WebView")
 	public WebElement lbl_browser;
 
-	@FindBy(name = "Map")
+	@FindBy(className = "android.view.View")
 	public WebElement lbl_map;
 
 	@iOSFindBy(xpath="//UIAElement[1]")
@@ -53,7 +53,7 @@ public class Frm4 extends BaseForm {
 	@AndroidFindBy(xpath = "//android.widget.Button[contains(@resource-id,'tsbb')]")
 	public WebElement srch_btn;
 
-	@FindBy(name = "Click for more widgets")
+	@FindBy(xpath = "//android.widget.TextView[@text='Click for more widgets']")
 	public WebElement navigation_link;
 
 	// Method that performs operations in Form Five

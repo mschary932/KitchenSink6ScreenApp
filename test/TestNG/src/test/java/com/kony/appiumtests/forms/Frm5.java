@@ -31,18 +31,17 @@ public class Frm5 extends BaseForm
 	}
 
 	//Locators used in Form Six
-
-	@FindBy(name="Picker View")
+	@FindBy(xpath = "//android.widget.TextView[@text='Picker View']")
 	public WebElement lbl_pickerview;
 
 
-	@FindBy(name="2010")
+	@FindBy(xpath = "//android.widget.TextView[@text='2010']")
 	public WebElement select_year;
 
-	@FindBy(name ="Mar")
+	@FindBy(xpath = "//android.widget.TextView[@text='Mar']")
 	public WebElement select_month;
 
-	@FindBy(name ="Click for more widgets")
+	@FindBy(xpath = "//android.widget.TextView[@text='Click for more widgets']")
 	public WebElement navigation_link;
 
 	

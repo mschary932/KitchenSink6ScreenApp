@@ -58,7 +58,7 @@ public class Frm1 extends BaseForm {
 	@AndroidFindBy(xpath = "//android.widget.TextView[@text='RC 11']")
 	public WebElement grid_selection;
 
-	@FindBy(name = "Click for more widgets")
+	@FindBy(xpath = "//android.widget.TextView[@text='Click for more widgets']")
 	public WebElement navigation_link;
 
 	public String link_nxtwidgets = "Click for more widgets";

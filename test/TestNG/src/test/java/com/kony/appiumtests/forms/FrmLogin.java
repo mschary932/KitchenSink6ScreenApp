@@ -14,7 +14,9 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
 
 public class FrmLogin extends BaseForm {
 
@@ -40,25 +42,25 @@ public class FrmLogin extends BaseForm {
 	 *         to support the PageObject pattern.
 	 */
 
-	@FindBy(name = "Sign In")
+	@FindBy(className = "android.widget.Button")
 	private WebElement lbl_SignIn;
 	
-	@FindBy(name = "Go to frm1")
+	@FindBy(xpath = "//android.widget.Button[@text='Go to frm1']")
 	public WebElement lbl_frm1;
 	
-	@FindBy(name = "Go to frm2")
+	@FindBy(xpath = "//android.widget.Button[@text='Go to frm2']")
 	public WebElement lbl_frm2;
 	
-	@FindBy(name = "Go to frm3")
+	@FindBy(xpath = "//android.widget.Button[@text='Go to frm3']")
 	public WebElement lbl_frm3;
 	
-	@FindBy(name = "Go to frm4")
+	@FindBy(xpath = "//android.widget.Button[@text='Go to frm4']")
 	public WebElement lbl_frm4;
 	
-	@FindBy(name = "Go to frm5")
+	@FindBy(xpath = "//android.widget.Button[@text='Go to frm5']")
 	public WebElement lbl_frm5;
 	
-	@FindBy(name = "Go to frmLogout")
+	@FindBy(xpath = "//android.widget.Button[@text='Go to frmLogout']")
 	public WebElement lbl_frmLogout;
 
 	private WebElement username;
@@ -71,8 +73,8 @@ public class FrmLogin extends BaseForm {
 		this.username = textBoxList.get(0);
 		this.pass_word = textBoxList.get(1);
 	}
-
-	@FindBy(name = "Login")
+	
+	@FindBy(xpath = "//android.widget.Button[@text='Login']")
 	public WebElement btnLogin;
 
 	public void loginIn(String userName, String password) {

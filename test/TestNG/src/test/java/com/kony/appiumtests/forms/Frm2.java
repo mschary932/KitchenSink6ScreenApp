@@ -31,10 +31,10 @@ public class Frm2 extends BaseForm {
 	}
 
 	// Locators in Form Three
-	@FindBy(name = "ListBox")
-	public WebElement lbl_list;
-
-	@FindBy(name = "select one value")
+	@FindBy(xpath = "//android.widget.RadioButton[@text='select one value']")
+		public WebElement lbl_list;
+	
+	@FindBy(xpath = "//android.widget.TextView[@text='select one value']")
 	public WebElement list_selection;
 
 	@FindBy(name = "lstBx")
@@ -46,7 +46,7 @@ public class Frm2 extends BaseForm {
 	@AndroidFindBy(xpath = "//android.widget.CheckedTextView[@index='1']")
 	public WebElement list_value;
 
-	@FindBy(name = "Radio Button Group")
+	@FindBy(xpath = "//android.widget.TextView[@text='Radio Button Group']")
 	public WebElement radiobuttons_header;
 
 	@AndroidFindBy(xpath = "//android.widget.RadioButton[@index='2']")
@@ -55,10 +55,10 @@ public class Frm2 extends BaseForm {
 	@iOSFindBy(id="select one value")
 	public WebElement radioGroup;
 
-	@FindBy(name="RadioButtonGroup")
+	@FindBy(className="android.widget.RadioGroup")
 	public List<WebElement> radiobtnGroup;
 
-	@FindBy(name = "Click for more widgets")
+	@FindBy(xpath = "//android.widget.TextView[@text='Click for more widgets']")
 	public WebElement navigation_link;
 
 	public String link_nxtwidgets = "Click for more widgets";

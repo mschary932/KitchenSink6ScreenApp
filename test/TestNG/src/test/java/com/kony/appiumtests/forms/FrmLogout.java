@@ -37,7 +37,7 @@ public class FrmLogout extends BaseForm
 
 
 	//Locators_PostLogin Screen
-	@FindBy(name="Sign Out")
+	@FindBy(className="android.widget.Button")
 	public WebElement btn_SignOut;
 
 	@FindBy(name="Post Login Page")

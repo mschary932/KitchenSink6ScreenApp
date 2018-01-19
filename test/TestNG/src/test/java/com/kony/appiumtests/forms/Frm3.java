@@ -35,14 +35,14 @@ public class Frm3 extends BaseForm {
 	@AndroidFindBy(className = "android.widget.SeekBar")
 	public WebElement move_slider;
 
-	@FindBy(name = "TextArea")
+	@FindBy(className = "android.widget.EditText")
 	public WebElement lbl_editfield;
 
 	@iOSFindBy(className = "UIATextView")
 	@AndroidFindBy(className = "android.widget.EditText")
 	public WebElement enter_text;
-
-	@FindBy(name = "Click for more widgets")
+	
+	@FindBy(xpath = "//android.widget.TextView[@text='Click for more widgets']")
 	public WebElement navigation_link;
 
 	public String link_nxtwidgets = "Click for more widgets";
