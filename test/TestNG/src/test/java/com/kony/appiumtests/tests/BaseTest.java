@@ -51,6 +51,7 @@ public abstract class BaseTest {
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		// The commented section is used when try to work in local Environment.
 
+		
 		/*
 		 * capabilities.setCapability("deviceName", "4d002205f1d230af");
 		 * capabilities.setCapability("platformVersion","5.0.1");
@@ -60,22 +61,13 @@ public abstract class BaseTest {
 		 * "com.engie.SampleTest.SampleTest");
 		 */
 
-		if (iosdriver == null) {
-
-			// Comm with Appium server
-			iosdriver = new IOSDriver(new URL("http://127.0.0.1:4723/wd/hub"),capabilities);
-		}
-
-		System.out.println("Getting platform name from capabilities.........."
-				+ iosdriver.getCapabilities().getPlatform().toString());
-		/**
-		 * getPlatform() is used to know the platform on which the app is
-		 * running
-		 */
-		platformName = iosdriver.getCapabilities().getPlatform().toString();
+		  platformName = capabilities.getCapability("platformName").toString();
 
 		if ("MAC".equalsIgnoreCase(platformName)) {
 			System.out.println("Inside platform MAC............");
+			if (iosdriver == null) {
+				iosdriver = new IOSDriver(new URL("http://127.0.0.1:4723/wd/hub"),capabilities);
+			}
 			driver = iosdriver;
 		} else {
 			if (driver != null) {
