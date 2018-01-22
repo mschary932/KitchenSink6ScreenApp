@@ -69,9 +69,15 @@ public class FrmLogin extends BaseForm {
 
 	private void initiaizeElements(){
 		System.out.println("textBoxClass for the platform .."+platformName+".. is ... "+textBoxClass);
-		List<WebElement> textBoxList = driver.findElements(By.className(textBoxClass));
-		this.username = textBoxList.get(0);
-		this.pass_word = textBoxList.get(1);
+		try {
+			Thread.sleep(2000);
+			List<WebElement> textBoxList = driver.findElements(By.className(textBoxClass));
+			this.username = textBoxList.get(0);
+			this.pass_word = textBoxList.get(1);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	@FindBy(xpath = "//android.widget.Button[@text='Login']")
