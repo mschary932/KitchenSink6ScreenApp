@@ -52,14 +52,14 @@ public abstract class BaseTest {
 		// The commented section is used when try to work in local Environment.
 
 		
-		
-		  capabilities.setCapability("deviceName", "4d00962cd43212ad");
+		//Capabilities for Android platform
+		/*  capabilities.setCapability("deviceName", "4d00962cd43212ad");
 		  capabilities.setCapability("platformVersion","4.4.2");
 		  capabilities.setCapability("platformName", "Android" );
 		  capabilities.setCapability("appPackage", "com.orgname.NovartisDemo");
 		  capabilities.setCapability("appActivity",
 		 "com.orgname.NovartisDemo.KssampleAG");
-		 
+		 */
 
 		  platformName = capabilities.getCapability("platformName").toString();
 
