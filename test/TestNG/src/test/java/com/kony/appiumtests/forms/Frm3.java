@@ -7,6 +7,7 @@ Purpose of the Class	:	To maintain the repository for the locators
 
 package com.kony.appiumtests.forms;
 
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.iOSFindBy;
@@ -40,7 +41,7 @@ public class Frm3 extends BaseForm {
 
 	@iOSFindBy(className = "UIATextView")
 	@AndroidFindBy(className = "android.widget.EditText")
-	public WebElement enter_text;
+	public MobileElement enter_text;
 	
 	@FindBy(xpath = "//android.widget.TextView[@text='Click for more widgets']")
 	public WebElement navigation_link;
@@ -72,10 +73,10 @@ public class Frm3 extends BaseForm {
 	}
 	public void textOperation(){
 		if ("MAC".equalsIgnoreCase("platformName")) {
-			this.enter_text.sendKeys("welcome to application");
+			this.enter_text.setValue("welcome to application");
 			iosdriver.hideKeyboard(HideKeyboardStrategy.PRESS_KEY, "Cancel");
 		} else {
-			this.enter_text.sendKeys("welcome to application");
+			this.enter_text.setValue("welcome to application");
 			androiddriver.hideKeyboard();
 		}
 
