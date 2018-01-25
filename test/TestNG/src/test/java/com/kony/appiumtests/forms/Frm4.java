@@ -33,6 +33,9 @@ public class Frm4 extends BaseForm {
 	 * find the Web Element of a page.
 	 */
 
+	@FindBy(xpath = "//android.widget.Button[@text='Show Location']")
+	public WebElement btn_ShowLocation;	
+	
 	@FindBy(className = "android.webkit.WebView")
 	public WebElement lbl_browser;
 
@@ -93,8 +96,12 @@ public class Frm4 extends BaseForm {
 	 * isDisplayed() is boolean method i.e, it returns true or false. Basically
 	 * this method is used to find whether the element is being displayed.
 	 */
-	public boolean isDisplayed() {
+	public boolean isDisplayed(){
 		return (this.lbl_browser.isDisplayed() || this.lbl_map.isDisplayed());
 	}
-
+	
+	public void allowShowLocation()
+	{
+		btn_ShowLocation.click();
+	}
 }

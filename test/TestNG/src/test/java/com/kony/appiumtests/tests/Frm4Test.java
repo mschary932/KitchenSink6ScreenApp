@@ -67,6 +67,9 @@ public class Frm4Test extends BaseTest {
 
 		if (frmfour.isDisplayed()) {
 			System.out.println("Starts browserWidgetTest operations");
+			Thread.sleep(10000);
+			frmfour.allowShowLocation();
+			Thread.sleep(10000);
 			frmfour.browserWidget();
 			System.out.println("Ends browserWidgetTest Operations");
 		}
