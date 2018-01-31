@@ -166,7 +166,7 @@
     "category": "app",
     "createdVizVersion": "7.0.0",
     "createdgaversion": "7.0.0",
-    "currentgaversion": "7.3.0",
+    "currentgaversion": "8.1.4",
     "defaulttheme": "defaultTheme",
     "desktopwebbasefontsize": "12",
     "enableIdForAutomation": false,
@@ -174,7 +174,7 @@
     "isA11yConfigEnabled": false,
     "isDpScaleFactor": true,
     "isNewAppWithRespectToAndroidPackageName": "",
-    "konyVizVersion": "7.3.0",
+    "konyVizVersion": "8.1.4",
     "mwaddrkey": "",
     "mwhttpsportkey": "",
     "mwportkey": "",
@@ -186,7 +186,7 @@
     },
     "project.type": "js",
     "projectCloudGuid": "f85ecde1-0619-43d9-bce7-d0208c5e3777",
-    "project_version": "sprint27",
+    "project_version": "sprint30",
     "prototype": {
         "createdBy": "Miguel%E1ngel Fern%E1ndez",
         "createdById": "0f750f64-586b-4488-9a72-0e4b44d613ba",
@@ -195,7 +195,7 @@
         "shareGuid": "ET1VM"
     },
     "referenceWidth": "375",
-    "startupformkey": "frmLogin",
+    "startupformkey": "f27dad4cfa8f4cb3a7b553f5bbadc5e6",
     "statusBarHidden": "false",
     "vendornamekey": "KonyLabs",
     "wap_android240_fontsize": "12",
@@ -226,5 +226,6 @@
     "watchos_notificationcentericon_42": "",
     "watchos_shortlooknotificationicon_38": "",
     "watchos_shortlooknotificationicon_42": "",
-    "winmobileguidkey": ""
+    "winmobileguidkey": "",
+    "tabletstartupformkey": "c881a0ef27e544b2adffa97617e9e19e"
 }
