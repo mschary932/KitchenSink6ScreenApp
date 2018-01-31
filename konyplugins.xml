@@ -20,7 +20,6 @@
     <pluginInfo version-no="8.1.3.v201801021556" plugin-id="com.pat.tabrcandroid" plugin-name="Tablet Android"/>
     <pluginInfo version-no="8.1.0.v201712122019" plugin-id="com.kony.windowsphone8" plugin-name="Windows Phone 8 Plug-in"/>
     <pluginInfo version-no="8.1.0.v201712122007" plugin-id="com.kony.windows8" plugin-name="Windows 8.1 Plug-in"/>
-    <pluginInfo version-no="8.1.4.v201801111804" plugin-id="com.kony.windows10" plugin-name="Windows 10 Plug-in"/>
     <pluginInfo version-no="8.1.3.v201801021556" plugin-id="com.pat.android" plugin-name="Android"/>
     <pluginInfo version-no="8.1.0.v201712121941" plugin-id="com.kony.windows" plugin-name="Windows Desktop Plug-in"/>
     <pluginInfo version-no="8.1.2.v201712281439" plugin-id="com.kony.spa" plugin-name="SPA"/>
