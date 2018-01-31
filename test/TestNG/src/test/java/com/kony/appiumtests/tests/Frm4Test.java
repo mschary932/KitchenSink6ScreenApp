@@ -68,6 +68,7 @@ public class Frm4Test extends BaseTest {
 		if (frmfour.isDisplayed()) {
 			System.out.println("Starts browserWidgetTest operations");
 			Thread.sleep(10000);
+			if(frmfour.isElementPresent(frmfour.btn_ShowLocation))
 			frmfour.allowShowLocation();
 			Thread.sleep(10000);
 			frmfour.browserWidget();
