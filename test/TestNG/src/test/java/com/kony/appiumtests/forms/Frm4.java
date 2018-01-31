@@ -104,4 +104,14 @@ public class Frm4 extends BaseForm {
 	{
 		btn_ShowLocation.click();
 	}
+	public boolean isElementPresent(WebElement element) {
+		try {
+		   element.getText();
+		   return true;
+			} 
+		catch (Exception e) {
+			return false;
+		}
+	}
 }
+	
