@@ -7,12 +7,12 @@ Purpose of the Class	:	To maintain the repository for the locators
 
 package com.kony.appiumtests.forms;
 
+import io.appium.java_client.pagefactory.AndroidFindBy;
+import io.appium.java_client.pagefactory.iOSFindBy;
 import io.appium.java_client.remote.HideKeyboardStrategy;
 
 import java.util.List;
 
-
-import io.appium.java_client.MobileElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -41,57 +41,63 @@ public class FrmLogin extends BaseForm {
 	 * @FindBy is just an alternate way of finding elements. It is better used
 	 *         to support the PageObject pattern.
 	 */
-
-	@FindBy(className = "android.widget.Button")
+	@iOSFindBy(id="btnSignIn")
+	@AndroidFindBy(className = "android.widget.Button")
 	private WebElement lbl_SignIn;
 	
-	@FindBy(xpath = "//android.widget.Button[@text='Go to frm1']")
+	@iOSFindBy(id = "btnGoToFrm1")
+	@AndroidFindBy(xpath = "//android.widget.Button[@text='Go to frm1']")
 	public WebElement lbl_frm1;
 	
-	@FindBy(xpath = "//android.widget.Button[@text='Go to frm2']")
+	@iOSFindBy(id = "btnGoToFrm2")
+	@AndroidFindBy(xpath = "//android.widget.Button[@text='Go to frm2']")
 	public WebElement lbl_frm2;
 	
-	@FindBy(xpath = "//android.widget.Button[@text='Go to frm3']")
+	@iOSFindBy(id = "btnGoToFrm3")
+	@AndroidFindBy(xpath = "//android.widget.Button[@text='Go to frm3']")
 	public WebElement lbl_frm3;
 	
-	@FindBy(xpath = "//android.widget.Button[@text='Go to frm4']")
+	@iOSFindBy(id = "btnGoToFrm4")
+	@AndroidFindBy(xpath = "//android.widget.Button[@text='Go to frm4']")
 	public WebElement lbl_frm4;
 	
-	@FindBy(xpath = "//android.widget.Button[@text='Go to frm5']")
+	@iOSFindBy(id = "btnGoToFrm5")
+	@AndroidFindBy(xpath = "//android.widget.Button[@text='Go to frm5']")
 	public WebElement lbl_frm5;
 	
-	@FindBy(xpath = "//android.widget.Button[@text='Go to frmLogout']")
+	@iOSFindBy(id = "btnGoToFrmLogout")
+	@AndroidFindBy(xpath = "//android.widget.Button[@text='Go to frmLogout']")
 	public WebElement lbl_frmLogout;
 
-	private MobileElement username;
+	private WebElement username;
 
-	private MobileElement pass_word;
+	private WebElement pass_word;
 
 	private void initiaizeElements(){
 		System.out.println("textBoxClass for the platform .."+platformName+".. is ... "+textBoxClass);
 		try {
 			Thread.sleep(2000);
 			List<WebElement> textBoxList = driver.findElements(By.className(textBoxClass));
-			this.username = (MobileElement) textBoxList.get(0);
-			this.pass_word = (MobileElement) textBoxList.get(1);
+			this.username = textBoxList.get(0);
+			this.pass_word = textBoxList.get(1);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
-	
-	@FindBy(xpath = "//android.widget.Button[@text='Login']")
+	@iOSFindBy(id="btnSignIn")
+	@AndroidFindBy(xpath = "//android.widget.Button[@text='Login']")
 	public WebElement btnLogin;
 
 	public void loginIn(String userName, String password) {
 		this.initiaizeElements();
-		this.username.setValue(userName);
+		this.username.sendKeys(userName);
 		if ("MAC".equalsIgnoreCase(platformName)) {
 			iosdriver.hideKeyboard(HideKeyboardStrategy.PRESS_KEY, "Done");
 		} else {
 			androiddriver.hideKeyboard();
 		}
-		this.pass_word.setValue(password);
+		this.pass_word.sendKeys(password);
 		if ("MAC".equalsIgnoreCase(platformName)) {
 			iosdriver.hideKeyboard(HideKeyboardStrategy.PRESS_KEY, "Done");
 		} else {
