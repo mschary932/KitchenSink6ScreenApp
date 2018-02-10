@@ -90,15 +90,17 @@ public class FrmLogin extends BaseForm {
 	@AndroidFindBy(xpath = "//android.widget.Button[@text='Login']")
 	public WebElement btnLogin;
 
-	public void loginIn(String userName, String password) {
+	public void loginIn(String userName, String password) throws InterruptedException {
 		this.initiaizeElements();
 		this.username.setValue(userName);
+		Thread.sleep(10000);
 		if ("MAC".equalsIgnoreCase(platformName)) {
 			iosdriver.hideKeyboard(HideKeyboardStrategy.PRESS_KEY, "Done");
 		} else {
 			androiddriver.hideKeyboard();
 		}
 		this.pass_word.setValue(password);
+		Thread.sleep(10000);
 		if ("MAC".equalsIgnoreCase(platformName)) {
 			iosdriver.hideKeyboard(HideKeyboardStrategy.PRESS_KEY, "Done");
 		} else {
