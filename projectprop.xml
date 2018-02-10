@@ -391,7 +391,7 @@
     <attributes name="WP8_ID_CAP_SENSORS" value="true"/>
     <attributes name="usevizactions" value="false"/>
     <attributes name="ID_CAP_MICROPHONE" value="true"/>
-    <attributes name="enableIdForAutomation" value="true"/>
+    <attributes name="enableIdForAutomation" value="false"/>
     <attributes name="wp10tileUpdateRecurrenceKey" value=""/>
     <attributes name="wp81sdisplaynamekey" value="Sample"/>
     <attributes name="wp10codeGeneration" value="false"/>
