@@ -7,6 +7,7 @@ Purpose of the Class	:	To maintain the repository for the locators
 
 package com.kony.appiumtests.forms;
 
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.iOSFindBy;
 import io.appium.java_client.remote.HideKeyboardStrategy;
@@ -69,17 +70,17 @@ public class FrmLogin extends BaseForm {
 	@AndroidFindBy(xpath = "//android.widget.Button[@text='Go to frmLogout']")
 	public WebElement lbl_frmLogout;
 
-	private WebElement username;
+	private MobileElement username;
 
-	private WebElement pass_word;
+	private MobileElement pass_word;
 
 	private void initiaizeElements(){
 		System.out.println("textBoxClass for the platform .."+platformName+".. is ... "+textBoxClass);
 		try {
 			Thread.sleep(2000);
 			List<WebElement> textBoxList = driver.findElements(By.className(textBoxClass));
-			this.username = textBoxList.get(0);
-			this.pass_word = textBoxList.get(1);
+			this.username = (MobileElement) textBoxList.get(0);
+			this.pass_word = (MobileElement) textBoxList.get(1);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -91,13 +92,13 @@ public class FrmLogin extends BaseForm {
 
 	public void loginIn(String userName, String password) {
 		this.initiaizeElements();
-		this.username.sendKeys(userName);
+		this.username.setValue(userName);
 		if ("MAC".equalsIgnoreCase(platformName)) {
 			iosdriver.hideKeyboard(HideKeyboardStrategy.PRESS_KEY, "Done");
 		} else {
 			androiddriver.hideKeyboard();
 		}
-		this.pass_word.sendKeys(password);
+		this.pass_word.setValue(password);
 		if ("MAC".equalsIgnoreCase(platformName)) {
 			iosdriver.hideKeyboard(HideKeyboardStrategy.PRESS_KEY, "Done");
 		} else {
