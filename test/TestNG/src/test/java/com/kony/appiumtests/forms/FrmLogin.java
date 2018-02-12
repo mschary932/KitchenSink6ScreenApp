@@ -91,6 +91,7 @@ public class FrmLogin extends BaseForm {
 	public WebElement btnLogin;
 
 	public void loginIn(String userName, String password) throws InterruptedException {
+		if(isDisplayed()){
 		this.initiaizeElements();
 		this.username.setValue(userName);
 		Thread.sleep(10000);
@@ -107,6 +108,7 @@ public class FrmLogin extends BaseForm {
 			androiddriver.hideKeyboard();
 		}
 		this.btnLogin.click();
+		}
 	}
 
 	/**
