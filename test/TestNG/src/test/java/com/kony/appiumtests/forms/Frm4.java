@@ -10,6 +10,8 @@ package com.kony.appiumtests.forms;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.iOSFindBy;
 
+import java.util.List;
+
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -41,6 +43,12 @@ public class Frm4 extends BaseForm {
 
 	@FindBy(className = "android.view.View")
 	public WebElement lbl_map;
+	
+	@iOSFindBy(className = "UIASwitch")
+	@AndroidFindBy(className = "android.widget.CheckBox")
+	public List<WebElement> checkBoxGroup;
+	
+	public WebElement chekbox;
 
 	@iOSFindBy(xpath="//UIAElement[1]")
 	@AndroidFindBy(xpath = "//android.widget.Spinner[@index='0']")
@@ -102,6 +110,8 @@ public class Frm4 extends BaseForm {
 	
 	public void allowShowLocation()
 	{
+	    chekbox = checkBoxGroup.get(0);
+	    this.chekbox.click();
 		btn_ShowLocation.click();
 	}
 	public boolean isElementPresent(WebElement element) {
